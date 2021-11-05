@@ -6,8 +6,10 @@
 import { defineComponent } from 'vue';
 import Container from '@/common/components/Container.vue';
 
-export default defineComponent({
+const Home = defineComponent({
 	name: 'Home',
 	components: { Container },
 });
+
+export default Home;
 </script>
