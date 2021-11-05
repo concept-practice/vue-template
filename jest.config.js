@@ -3,5 +3,5 @@ module.exports = {
 	transform: {
 		'^.+\\.vue$': 'vue-jest',
 	},
-	setupFilesAfterEnv: ['src/setupTests.js'],
+	setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
 };
