@@ -3,8 +3,9 @@
 </template>
 
 <script lang="ts">
-import HttpClient from '@/common/data/httpClient';
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
+import IDataFetch from '../star-wars/IDataFetch';
+import useDataFetch from '../star-wars/useDataFetch';
 import Airplane from './Airplane';
 import AirplanesIndex from './AirplanesIndex.vue';
 export default defineComponent({
@@ -12,13 +13,24 @@ export default defineComponent({
 	components: {
 		AirplanesIndex,
 	},
-	data() {
+	setup() {
+		let airplanes = ref<Array<Airplane>>([]);
+
+		const dataFetch: IDataFetch = useDataFetch();
+
+		onMounted(() => dataFetch.GetAll<Array<Airplane>>().then((x) => (airplanes.value = x)));
+
 		return {
-			airplanes: new Array<Airplane>(),
+			airplanes,
 		};
 	},
-	mounted() {
-		HttpClient.Get<Array<Airplane>>().then((x) => (this.$data.airplanes = x));
-	},
+	// data() {
+	// 	return {
+	// 		airplanes: new Array<Airplane>(),
+	// 	};
+	// },
+	// mounted() {
+	// 	HttpClient.Get<Array<Airplane>>().then((x) => (this.$data.airplanes = x));
+	// },
 });
 </script>

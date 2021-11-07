@@ -3,6 +3,8 @@ import Home from '../features/home/Home.vue';
 import AirplanesContainer from '../features/airplanes/AirplanesContainer.vue';
 import AddAirplane from '../features/airplanes/AddAirplane.vue';
 import IndividualAirplaneDetails from '../features/airplanes/IndividualAirplaneDetails.vue';
+import Planet from '../features/star-wars/Planet.vue';
+import PlanetInput from '../features/star-wars/PlanetInput.vue';
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -20,6 +22,16 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/airplanes/add',
 		name: 'AddAirplane',
 		component: AddAirplane,
+	},
+	{
+		path: '/planets',
+		name: 'PlanetIndex',
+		component: Planet,
+	},
+	{
+		path: '/planets/add',
+		name: 'AddPlanet',
+		component: PlanetInput,
 	},
 	{
 		path: '/',
