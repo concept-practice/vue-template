@@ -38,7 +38,7 @@ const PlanetInput = defineComponent({
 
 		const dataFetch: IDataFetch = useDataFetch();
 
-		onMounted(() => dataFetch.GetAll<Array<Airplane>>().then((x) => (airplanes.value = x)));
+		onMounted(async () => (airplanes.value = await dataFetch.GetAll<Array<Airplane>>()));
 
 		return { name, airplanes };
 	},
