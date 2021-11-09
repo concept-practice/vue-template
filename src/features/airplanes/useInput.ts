@@ -1,18 +1,22 @@
-import { Ref, ref, watch } from '@vue/runtime-dom';
+import { Ref, ref } from '@vue/runtime-dom';
 import IUseInput from './IUseInput';
-import IValidator from './IValidator';
 
-export default function useInput<T>(defaultValue: Ref<T>, validators: Array<IValidator<T>>): IUseInput<T> {
+export default function useInput<T>(defaultValue: Ref<T>): IUseInput<T> {
 	const value = defaultValue;
 	const isValid = ref<boolean>(true);
 
-	watch(value, () => {
-		isValid.value = validators.every((x) => x.Validate(value.value));
-		console.log(isValid.value);
-	});
+	const setValue = (newValue: T): void => {
+		value.value = newValue;
+	};
+
+	const setIsValid = (valid: boolean): void => {
+		isValid.value = valid;
+	};
 
 	return {
 		value,
+		setValue,
 		isValid,
+		setIsValid,
 	};
 }

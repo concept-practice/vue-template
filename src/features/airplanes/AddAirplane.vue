@@ -4,32 +4,8 @@
 			<div class="column"></div>
 			<div class="column">
 				<form @submit="onSubmit">
-					<div class="field">
-						<label class="label">Manufacturer:</label>
-						<div class="control">
-							<input
-								v-model="manufacturer.value.value"
-								:class="{ 'is-danger': !manufacturer.isValid.value }"
-								class="input"
-								type="text"
-								placeholder="Manufacturer"
-								required />
-						</div>
-						<p v-if="!manufacturer.isValid.value" class="help is-danger">This field is invalid.</p>
-					</div>
-					<div class="field">
-						<label class="label">Model:</label>
-						<div class="control">
-							<input
-								v-model="model.value.value"
-								:class="{ 'is-danger': !model.isValid.value }"
-								class="input"
-								type="text"
-								placeholder="Model"
-								required />
-						</div>
-						<p v-if="!model.isValid.value" class="help is-danger">This field is invalid.</p>
-					</div>
+					<Input :label="'Manufacturer'" :placeholder="'Manufacturer'" :use-input="manufacturer" />
+					<Input :label="'Model'" :placeholder="'Model'" :use-input="model" />
 					<button type="submit" class="button is-primary">Add Airplane</button>
 				</form>
 			</div>
@@ -45,23 +21,24 @@ import HttpClient from '@/common/data/httpClient';
 import AddAirplaneRequest from './AddAirplaneRequest';
 import router from '@/router';
 import useInput from './useInput';
-import RequiredValidator from './RequiredValidator';
 import { ref } from 'vue';
+import Input from '../../common/components/Input.vue';
 
 export default defineComponent({
 	name: 'AddAirplane',
-	components: { Container },
+	components: { Container, Input },
 	setup() {
-		let manufacturer = useInput(ref(''), [new RequiredValidator<string>()]);
-		let model = useInput(ref(''), [new RequiredValidator<string>()]);
+		let manufacturer = useInput(ref(''));
+		let model = useInput(ref(''));
 
-		const onSubmit = (event: Event) => {
+		const onSubmit = async (event: Event) => {
 			var request: AddAirplaneRequest = {
 				manufacturer: manufacturer.value.value,
 				model: model.value.value,
 			};
 
-			HttpClient.Post<AddAirplaneRequest>(request, '').then(() => router.push({ name: 'AirplanesIndex' }));
+			await HttpClient.Post<AddAirplaneRequest>(request, '');
+			router.push({ name: 'AirplanesIndex' });
 			event.preventDefault();
 		};
 
