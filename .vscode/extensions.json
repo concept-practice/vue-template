@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"coenraads.bracket-pair-colorizer",
+		"streetsidesoftware.code-spell-checker",
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"eamodio.gitlens",
+		"zignd.html-css-class-completion",
+		"orta.vscode-jest",
+		"kohler.path-intellisense",
+		"esbenp.prettier-vscode",
+		"jcbuisson.vue",
+		"johnsoncodehk.volar",
+		"octref.vetur"
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"files.eol": "\n",
+	"files.autoSave": "onFocusChange",
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"auto-close-tag.disableOnLanguage": ["typescript", "javascript"]
+}
