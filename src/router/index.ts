@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../components/Home.vue";
+import HomeView from "../features/home/HomeView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
