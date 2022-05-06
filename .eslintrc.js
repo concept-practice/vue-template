@@ -9,6 +9,7 @@ module.exports = {
     "@vue/typescript/recommended",
     "plugin:vuejs-accessibility/recommended",
     "plugin:compat/recommended",
+    "plugin:jest/recommended",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
