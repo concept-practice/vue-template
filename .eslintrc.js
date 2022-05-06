@@ -4,10 +4,15 @@ module.exports = {
     node: true,
   },
   extends: [
-    "plugin:vue/vue3-essential",
+    "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/typescript/recommended",
+    "plugin:vuejs-accessibility/recommended",
+    "plugin:compat/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
+    "plugin:cypress/recommended",
   ],
   parserOptions: {
     ecmaVersion: 2020,
