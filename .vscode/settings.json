@@ -1,8 +1,7 @@
 {
-	"files.eol": "\n",
-	"files.autoSave": "onFocusChange",
-	"editor.formatOnSave": true,
-	"editor.formatOnSaveMode": "file",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"auto-close-tag.disableOnLanguage": ["typescript", "javascript"]
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active"
 }
