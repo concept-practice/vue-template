@@ -10,7 +10,7 @@ module.exports = {
     "plugin:vuejs-accessibility/recommended",
     "plugin:compat/recommended",
     "plugin:jest/recommended",
-    "plugin:testing-library/react",
+    "plugin:testing-library/vue",
     "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
     "plugin:cypress/recommended",
