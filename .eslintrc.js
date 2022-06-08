@@ -12,8 +12,8 @@ module.exports = {
     "plugin:jest/recommended",
     "plugin:testing-library/vue",
     "plugin:jest-dom/recommended",
-    "plugin:prettier/recommended",
     "plugin:cypress/recommended",
+    "plugin:prettier/recommended",
   ],
   parserOptions: {
     ecmaVersion: 2020,
