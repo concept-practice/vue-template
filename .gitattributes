@@ -2,6 +2,7 @@
 
 *.ts        text eol=lf
 *.tsx       text eol=lf
+*.vue       text eol=lf
 *.markdown  text diff=markdown
 *.md        text diff=markdown
 *.scss      text diff=css
