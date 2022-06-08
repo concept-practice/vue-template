@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/vue";
 import HomeView from "@/features/home/HomeView.vue";
-import { fireEvent } from "@testing-library/dom";
+import userEvent from "@testing-library/user-event";
 
 describe("Home", () => {
   it("Renders", () => {
@@ -12,7 +12,9 @@ describe("Home", () => {
   it("Counter", async () => {
     render(HomeView);
 
-    await fireEvent.click(screen.getByText(/Increase/i));
+    const user = userEvent.setup();
+
+    await user.click(screen.getByText(/Increase/i));
 
     expect(await screen.findByText("1")).toBeVisible();
   });
