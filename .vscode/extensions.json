@@ -12,6 +12,7 @@
     "aaron-bond.better-comments",
     "syler.sass-indented",
     "yzhang.markdown-all-in-one",
-    "vue.volar"
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin"
   ]
 }
