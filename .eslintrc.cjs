@@ -8,6 +8,8 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "@vue/eslint-config-typescript",
     "plugin:vue/vue3-recommended",
     "plugin:cypress/recommended",
