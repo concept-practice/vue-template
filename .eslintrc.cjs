@@ -11,5 +11,6 @@ module.exports = {
     "@vue/eslint-config-typescript",
     "plugin:vue/vue3-recommended",
     "plugin:cypress/recommended",
+    "plugin:prettier/recommended",
   ],
 };
