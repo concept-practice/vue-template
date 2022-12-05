@@ -4,9 +4,9 @@ module.exports = {
     node: true,
   },
   extends: [
-    "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/typescript/recommended",
+    "plugin:vue/vue3-recommended",
     "plugin:vuejs-accessibility/recommended",
     "plugin:compat/recommended",
     "plugin:jest/recommended",
@@ -22,6 +22,14 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "@typescript-eslint/explicit-function-return-type": [1],
+    "vuejs-accessibility/label-has-for": [
+      2,
+      {
+        required: {
+          every: ["id"],
+        },
+      },
+    ],
   },
   overrides: [
     {
