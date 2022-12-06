@@ -6,7 +6,7 @@ describe("LandingHome", () => {
   it("Renders", () => {
     render(LandingHome);
 
-    expect(screen.getByText(/At Home/i)).toBeInTheDocument();
+    expect(screen.getByText(/at home/i)).toBeInTheDocument();
   });
 
   it("Counter Works", async () => {
@@ -14,7 +14,7 @@ describe("LandingHome", () => {
 
     const user = userEvent.setup();
 
-    user.click(screen.getByText(/Increase/i));
+    user.click(screen.getByText(/increase/i));
 
     expect(await screen.findByText(/1/i)).toBeInTheDocument();
   });
