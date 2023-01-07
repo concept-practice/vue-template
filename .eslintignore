@@ -1,4 +1,7 @@
-src/setupTests.ts
-src/registerServiceWorker.ts
 src/shims-vue.d.ts
-tests/e2e/plugins/index.js
+cypress/support/e2e.ts
+env.d.ts
+src/shims-vue.d.ts
+vite.config.ts
+cypress.config.ts
+vitest.config.ts

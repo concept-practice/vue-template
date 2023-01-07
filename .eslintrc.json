@@ -1,0 +1,33 @@
+{
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": ["./tsconfig.app.json", "./tsconfig.vitest.json", "./cypress/e2e/tsconfig.json"],
+    "ecmaVersion": "latest"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
+    "@vue/eslint-config-typescript",
+    "plugin:vue/vue3-recommended",
+    "plugin:unicorn/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:promise/recommended",
+    "plugin:vuejs-accessibility/recommended",
+    "plugin:compat/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "plugin:cypress/recommended",
+    "plugin:jest-formatting/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 2,
+    "unicorn/filename-case": 0,
+    "unicorn/consistent-function-scoping": [2, { "checkArrowFunctions": false }],
+    "promise/prefer-await-to-then": 2
+  }
+}
