@@ -10,7 +10,7 @@ export default function useMountedFetch<T>(initial: T, url: string): Ref<T> {
 
       const body = (await response.json()) as string;
 
-      setState(body as T);
+      setState(body as unknown as T);
     };
 
     void fetchData();
