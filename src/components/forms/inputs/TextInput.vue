@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IUseInput } from "../interfaces/IUseInput";
+import type { IUseInput } from "@/components/Index";
 import BaseTextInput from "./BaseTextInput.vue";
 
 export interface TextInputProperties {
