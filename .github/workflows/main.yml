@@ -30,7 +30,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          start: npm preview
+          start: npm run preview
       - run: npm run build
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
