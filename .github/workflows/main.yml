@@ -29,6 +29,8 @@ jobs:
       - run: npm run test:unit
       - name: Cypress run
         uses: cypress-io/github-action@v5
+        with:
+          start: npm preview
       - run: npm run build
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
