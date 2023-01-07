@@ -1,6 +1,6 @@
+import type { IUseInput } from "@/components/Index";
 import useState from "@/hooks/useState";
 import { ValueDefaults } from "@/utilities/ValueDefaults";
-import type { IUseInput } from "../interfaces/IUseInput";
 
 export default function useInput<T>(
   initialValue: T,

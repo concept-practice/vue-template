@@ -14,9 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import useCanSubmit from "@/components/forms/hooks/UseCanSubmit";
-import useTextInput from "@/components/forms/hooks/UseTextInput";
-import TextInput from "@/components/forms/inputs/TextInput.vue";
+import { useCanSubmit, useTextInput, TextInput } from "@/components/Index";
 import useState from "@/hooks/useState";
 import { ValueDefaults } from "@/utilities/ValueDefaults";
 

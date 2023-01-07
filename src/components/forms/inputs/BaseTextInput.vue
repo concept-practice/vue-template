@@ -20,10 +20,10 @@
 </template>
 
 <script setup lang="ts">
+import type { IUseInput } from "@/components/Index";
 import useState from "@/hooks/useState";
 import { ValueDefaults } from "@/utilities/ValueDefaults";
 import { reactive, computed } from "vue";
-import type { IUseInput } from "../interfaces/IUseInput";
 
 export interface BaseTextInputProperties {
   label: string;
