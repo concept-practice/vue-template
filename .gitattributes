@@ -1,6 +1,7 @@
 *           text=auto
 
 *.vue       text eol=lf
+*.ts        text eol=lf
 *.markdown  text diff=markdown
 *.md        text diff=markdown
 *.scss      text diff=css
