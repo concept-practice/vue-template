@@ -12,15 +12,16 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
     "@vue/eslint-config-typescript",
-    "@vue/eslint-config-typescript",
     "plugin:vue/vue3-recommended",
     "plugin:unicorn/recommended",
+    "plugin:sonarjs/recommended",
     "plugin:promise/recommended",
     "plugin:vuejs-accessibility/recommended",
     "plugin:compat/recommended",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
     "plugin:cypress/recommended",
+    "plugin:jest-formatting/recommended",
     "plugin:prettier/recommended"
   ],
   "rules": {
