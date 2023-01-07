@@ -26,6 +26,7 @@
   ],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": 2,
+    "@typescript-eslint/array-type": [2, { "default": "generic" }],
     "unicorn/filename-case": 0,
     "unicorn/consistent-function-scoping": [2, { "checkArrowFunctions": false }],
     "promise/prefer-await-to-then": 2,

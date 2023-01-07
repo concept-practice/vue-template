@@ -4,21 +4,25 @@
     <div :id="inputId" class="control">
       <input
         class="input"
-        :class="hook.valid ? '' : 'is-danger'"
+        :class="isDirtyInvalid ? 'is-danger' : ''"
         :type="type"
         :placeholder="placeholder"
         :value="hook.state"
         :required="required"
-        @input="hook.handleEvent"
-        @focus="hook.handleEvent"
+        @input="handleInput"
+        @focus="handleInput"
       />
     </div>
-    <p class="help is-danger">{{ hook.error }}</p>
+    <p class="help is-danger" :class="isDirtyInvalid ? '' : 'is-invisible'">
+      {{ isDirtyInvalid ? hook.error : "valid" }}
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive } from "vue";
+import useState from "@/hooks/useState";
+import { ValueDefaults } from "@/utilities/ValueDefaults";
+import { reactive, computed } from "vue";
 import type { IUseInput } from "../interfaces/IUseInput";
 
 export interface BaseTextInputProperties {
@@ -34,4 +38,13 @@ const properties = defineProps<BaseTextInputProperties>();
 const hook = reactive(properties.useInput);
 
 const inputId = Math.random().toString();
+
+const [dirty, setDirty] = useState<boolean>(ValueDefaults.Boolean);
+
+const handleInput = (event: Event): void => {
+  setDirty(true);
+  hook.handleEvent(event);
+};
+
+const isDirtyInvalid = computed<boolean>(() => dirty.value && !hook.valid);
 </script>
