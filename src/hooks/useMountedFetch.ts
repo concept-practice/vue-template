@@ -1,4 +1,4 @@
-import { onMounted, Ref } from "vue";
+import { onMounted, type Ref } from "vue";
 import useState from "./useState";
 
 export default function useMountedFetch<T>(initial: T, url: string): Ref<T> {
@@ -8,7 +8,7 @@ export default function useMountedFetch<T>(initial: T, url: string): Ref<T> {
     const fetchData = async (): Promise<void> => {
       const response = await fetch(url);
 
-      const body = await response.json();
+      const body = (await response.json()) as string;
 
       setState(body as T);
     };

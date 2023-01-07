@@ -14,7 +14,7 @@ describe("LandingHome", () => {
 
     const user = userEvent.setup();
 
-    user.click(screen.getByText(/increase/i));
+    await user.click(screen.getByText(/increase/i));
 
     expect(await screen.findByText(/1/i)).toBeInTheDocument();
   });

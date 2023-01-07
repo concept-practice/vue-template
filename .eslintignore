@@ -1,2 +1,7 @@
 src/shims-vue.d.ts
-.eslintrc.cjs
+cypress/support/e2e.ts
+env.d.ts
+src/shims-vue.d.ts
+vite.config.ts
+cypress.config.ts
+vitest.config.ts
