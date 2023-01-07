@@ -15,7 +15,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "bulma": "^0.9.4",
     "pinia": "^2.0.26",
+    "sass": "^1.57.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
