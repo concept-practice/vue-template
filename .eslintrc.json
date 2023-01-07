@@ -28,6 +28,14 @@
     "@typescript-eslint/explicit-function-return-type": 2,
     "unicorn/filename-case": 0,
     "unicorn/consistent-function-scoping": [2, { "checkArrowFunctions": false }],
-    "promise/prefer-await-to-then": 2
+    "promise/prefer-await-to-then": 2,
+    "vuejs-accessibility/label-has-for": [
+      2,
+      {
+        "required": {
+          "every": ["id"]
+        }
+      }
+    ]
   }
 }
