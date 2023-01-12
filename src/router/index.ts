@@ -1,3 +1,4 @@
+import FleetIndex from "@/features/airplanes/FleetIndex.vue";
 import LandingHome from "@/features/home/LandingHome.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -6,7 +7,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: LandingHome,
+      component: FleetIndex,
     },
   ],
 });
