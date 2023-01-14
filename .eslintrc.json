@@ -5,6 +5,7 @@
     "project": ["./tsconfig.app.json", "./tsconfig.vitest.json", "./cypress/e2e/tsconfig.json"],
     "ecmaVersion": "latest"
   },
+  "plugins": ["vitest"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -18,7 +19,7 @@
     "plugin:promise/recommended",
     "plugin:vuejs-accessibility/recommended",
     "plugin:compat/recommended",
-    "plugin:testing-library/react",
+    "plugin:testing-library/vue",
     "plugin:jest-dom/recommended",
     "plugin:cypress/recommended",
     "plugin:jest-formatting/recommended",
@@ -38,6 +39,19 @@
           "every": ["id"]
         }
       }
-    ]
-  }
+    ],
+    "vitest/expect-expect": 2,
+    "vitest/lower-case-title": 2,
+    "vitest/max-nested-describe": 2,
+    "vitest/no-conditional-tests": 2,
+    "vitest/no-focused-tests": 2,
+    "vitest/no-identical-title": 2,
+    "vitest/no-skipped-tests": 2
+  },
+  "overrides": [
+    {
+      "files": ["**/*.cy.ts"],
+      "rules": { "vitest/expect-expect": 0 }
+    }
+  ]
 }

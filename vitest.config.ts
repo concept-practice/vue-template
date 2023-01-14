@@ -8,6 +8,14 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: "setupTests.ts",
+    coverage: {
+      provider: "istanbul",
+      enabled: true,
+      branches: 100,
+      statements: 90,
+      functions: 90,
+      lines: 90,
+    },
   },
   resolve: {
     alias: {

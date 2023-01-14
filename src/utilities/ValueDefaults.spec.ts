@@ -1,15 +1,15 @@
 import { ValueDefaults } from "./ValueDefaults";
 
-describe("ValueDefaults", () => {
-  it("String has correct value", () => {
+describe("value defaults", () => {
+  it("string has correct value", () => {
     expect(ValueDefaults.String).toStrictEqual("");
   });
 
-  it("Boolean has correct value", () => {
+  it("boolean has correct value", () => {
     expect(ValueDefaults.Boolean).toStrictEqual(false);
   });
 
-  it("Number has correct value", () => {
+  it("number has correct value", () => {
     expect(ValueDefaults.Number).toStrictEqual(0);
   });
 });
